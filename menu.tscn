@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://vmsa2ipea46h"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = 172.0
+offset_top = 74.0
+offset_right = 1108.0
+offset_bottom = 646.0
+
+[node name="Sections" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Main menu" type="Button" parent="PanelContainer/Sections"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="Play" type="Button" parent="PanelContainer/Sections/Main menu"]
+layout_mode = 2
+offset_left = 100.0
+offset_right = 108.0
+offset_bottom = 572.0
+
+[node name="Settings" type="Button" parent="PanelContainer/Sections/Main menu"]
+layout_mode = 2
+offset_left = 100.0
+offset_right = 108.0
+offset_bottom = 572.0
+
+[node name="Quit" type="Button" parent="PanelContainer/Sections/Main menu"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
