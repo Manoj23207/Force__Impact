@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://vmsa2ipea46h"]
 
 [node name="Menu" type="Node2D"]
+position = Vector2(-97, 776)
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_left = 172.0
@@ -17,17 +18,30 @@ text = "Start Game"
 
 [node name="Play" type="Button" parent="PanelContainer/Sections/Main menu"]
 layout_mode = 2
-offset_left = 100.0
-offset_right = 108.0
-offset_bottom = 572.0
+anchor_right = 285.021
+anchor_bottom = 12.32
+offset_left = 383.0
+offset_top = -316.0
+offset_right = -1940.02
+offset_bottom = -1067.04
+text = "PLAY"
 
-[node name="Settings" type="Button" parent="PanelContainer/Sections/Main menu"]
+[node name="Play2" type="Button" parent="PanelContainer/Sections/Main menu"]
 layout_mode = 2
-offset_left = 100.0
-offset_right = 108.0
-offset_bottom = 572.0
+anchor_right = 285.021
+anchor_bottom = 12.32
+offset_left = 189.0
+offset_top = 6184.0
+offset_right = -2037.02
+offset_bottom = 4947.96
+text = "SETTINGS"
 
-[node name="Quit" type="Button" parent="PanelContainer/Sections/Main menu"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Play3" type="Button" parent="PanelContainer/Sections/Main menu"]
+layout_mode = 2
+anchor_right = 285.021
+anchor_bottom = 12.32
+offset_left = 286.0
+offset_top = 11908.0
+offset_right = -1940.02
+offset_bottom = 10672.0
+text = "QUIT"

@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://df44qbjskigqv" path="res://scenes/base/debris/temple_debris_1.tscn" id="11_qji5l"]
 [ext_resource type="PackedScene" uid="uid://7ffcufm7droq" path="res://scenes/base/stairs/temple_stairs_1.tscn" id="12_j61et"]
 [ext_resource type="PackedScene" uid="uid://devyfpyp8rohm" path="res://scenes/Player2.tscn" id="13_li4h3"]
-[ext_resource type="PackedScene" uid="uid://bkcl1shis334m" path="res://scenes/Zombie.tscn" id="13_qbt2t"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_l70q0"]
 size = Vector3(10, 0.5, 22)
@@ -43,6 +42,8 @@ albedo_color = Color(0.986752, 0.986752, 0.986752, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_li4h3"]
 resource_local_to_scene = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_j61et"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j61et"]
 resource_local_to_scene = true
@@ -418,9 +419,9 @@ transform = Transform3D(4.162, 0, 0, 0, 4.162, 0, 0, 0, 4.162, -1.03078, 24.627,
 [node name="Player2" parent="." instance=ExtResource("13_li4h3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.823381, 21.249, 64.939)
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player2"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -5.61816, 0)
+mesh = SubResource("PlaneMesh_j61et")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qbt2t")
-
-[node name="Map" type="Node3D" parent="."]
-
-[node name="Zombie" parent="Map" instance=ExtResource("13_qbt2t")]
