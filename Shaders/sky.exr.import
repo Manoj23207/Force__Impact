@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://21fjhknpo667"
-path="res://.godot/imported/oberer_kuhberg_4k.exr-bc0cb23fe13e1c51a7cc9cac974ee106.ctex"
+path="res://.godot/imported/sky.exr-df0a4cad4396188c45fefe83a384d351.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shaders/oberer_kuhberg_4k.exr"
-dest_files=["res://.godot/imported/oberer_kuhberg_4k.exr-bc0cb23fe13e1c51a7cc9cac974ee106.ctex"]
+source_file="res://Shaders/sky.exr"
+dest_files=["res://.godot/imported/sky.exr-df0a4cad4396188c45fefe83a384d351.ctex"]
 
 [params]
 
