@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vmsa2ipea46h"]
 
 [node name="Menu" type="Node2D"]
-position = Vector2(-97, 776)
+position = Vector2(0, -18239)
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_left = 172.0
