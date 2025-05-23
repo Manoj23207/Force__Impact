@@ -25,6 +25,10 @@ window/size/mode=2
 
 project/assembly_name="New Game Project"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
+
 [input]
 
 move_forward={

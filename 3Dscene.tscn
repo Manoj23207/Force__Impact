@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://df73pdsg4ph23" path="res://scenes/base/temple_pillars/templearc_piece_2.tscn" id="10_uomqi"]
 [ext_resource type="PackedScene" uid="uid://df44qbjskigqv" path="res://scenes/base/debris/temple_debris_1.tscn" id="11_qji5l"]
 [ext_resource type="PackedScene" uid="uid://7ffcufm7droq" path="res://scenes/base/stairs/temple_stairs_1.tscn" id="12_j61et"]
-[ext_resource type="PackedScene" uid="uid://devyfpyp8rohm" path="res://scenes/Player2.tscn" id="13_li4h3"]
+[ext_resource type="PackedScene" uid="uid://devyfpyp8rohm" path="res://scenes/Player.tscn" id="13_li4h3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j61et"]
 resource_local_to_scene = true
