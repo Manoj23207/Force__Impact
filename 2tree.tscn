@@ -6,3 +6,7 @@
 
 [node name="node_id59_7" parent="Sketchfab_model/root/GLTF_SceneRootNode/root_0" index="3"]
 transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.154616, -0.306093, 0.264861)
+visible = false
+
+[node name="Object_11" parent="Sketchfab_model/root/GLTF_SceneRootNode/root_0/node_id59_7" index="0"]
+visible = false
