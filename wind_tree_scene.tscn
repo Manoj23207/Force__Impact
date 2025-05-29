@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cxgur4h1k20b1"]
+
+[node name="WindTreeScene"]
+
+[editable path="Trees/Tree4"]
+[editable path="Trees/Tree7"]
+[editable path="Trees/Tree8"]
+[editable path="Trees/Tree9"]
+[editable path="Trees/Tree5"]
+[editable path="Trees/Tree6"]
+[editable path="Trees/Tree10"]
+[editable path="Trees/Tree11"]
+[editable path="Trees/Tree12"]

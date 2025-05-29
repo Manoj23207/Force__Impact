@@ -6,7 +6,7 @@
 radius = 0.556525
 height = 2.41603
 
-[node name="Zombie" instance=ExtResource("1_ec1nw")]
+[node name="Zombie2" instance=ExtResource("1_ec1nw")]
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/position = Vector3(0.311979, 0.465599, -82.1176)
