@@ -698,6 +698,5 @@ transform = Transform3D(9.94824, 0, -1.01612, 0, 10, 0, 1.01612, 0, 9.94824, 14.
 
 [node name="Zombie" parent="Node3D3" instance=ExtResource("24_1u8w0")]
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 1, -21.719, 90.3802, 291.745)
-visible = false
 
 [connection signal="player_hit" from="Map/NavigationRegion3D/Player" to="Map/NavigationRegion3D/Player" method="_on_player_player_hit"]
