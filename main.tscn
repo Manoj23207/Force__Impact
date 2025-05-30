@@ -105,7 +105,8 @@ resource_local_to_scene = true
 transform = Transform3D(0.994824, 0, 0.101612, 0, 1, 0, -0.101612, 0, 0.994824, -43.8381, 267.281, 0)
 
 [node name="groundsand" parent="." instance=ExtResource("1_dg77c")]
-transform = Transform3D(36.434, -6.89686, 33.541, 0.0852088, 48.9934, 9.98172, -34.2426, -7.21631, 35.7123, -509.72, 236.799, -332.416)
+transform = Transform3D(32.766, -7.59443, 36.9962, 0.0852088, 48.9934, 9.98172, -37.7675, -6.47815, 32.1193, -584.697, 504.08, -278.902)
+top_level = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_074og")
