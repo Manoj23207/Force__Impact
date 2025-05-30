@@ -87,10 +87,10 @@ transform = Transform3D(-0.433469, -6.97513, 0.399546, -5.12877, 0.589518, 4.727
 transform = Transform3D(4.59142, -3.8625, 0, 3.8625, 4.59142, 0, 0, 0, 6, 93.1046, 106.156, -107.439)
 
 [node name="rock_big14" parent="." instance=ExtResource("1_4c444")]
-transform = Transform3D(1, 0, 0, 0, -0.00509634, -0.999987, 0, 0.999987, -0.00509634, -21.4866, 43.4446, -87.966)
+transform = Transform3D(1, 0, 0, 0, -0.00509634, -0.999987, 0, 0.999987, -0.00509634, -21.4866, 10.6728, -87.966)
 
 [node name="rock_big15" parent="." instance=ExtResource("1_4c444")]
-transform = Transform3D(-0.636799, 0.746583, 0.192615, 0.141355, -0.132537, 0.981047, 0.757961, 0.651957, -0.0211336, -29.6628, 45.0868, -103.917)
+transform = Transform3D(-0.636799, 0.746583, 0.192615, 0.141355, -0.132537, 0.981047, 0.757961, 0.651957, -0.0211336, -29.6628, 11.6897, -103.917)
 
 [node name="rock_small24" parent="." instance=ExtResource("3_l70q0")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 97.1362, 52.4637, -86.3676)
@@ -108,13 +108,13 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -138.954, 58.2843, -156.792)
 transform = Transform3D(3.5, 0, 0, 0, 1, 0, 0, 0, 1, -3.10262, 5.94291, 78.8539)
 
 [node name="rock_small27" parent="." instance=ExtResource("3_l70q0")]
-transform = Transform3D(0.315552, 1.97007, -0.138751, 0.63636, -0.234441, -1.88151, -1.86962, 0.25271, -0.663826, -45.2498, 45.9132, -115.604)
+transform = Transform3D(0.315552, 1.97007, -0.138751, 0.63636, -0.234441, -1.88151, -1.86962, 0.25271, -0.663826, -45.2498, 11.5036, -115.604)
 
 [node name="rock_small28" parent="." instance=ExtResource("3_l70q0")]
 transform = Transform3D(1.47658, 0.531676, -10.3292, -1.08119, -0.296716, -14.7186, -0.806691, 1.37087, 0.820315, -82.6518, 20, -24.167)
 
 [node name="rock_small29" parent="." instance=ExtResource("3_l70q0")]
-transform = Transform3D(0.722484, 0.359908, 3.4045, -0.163808, 2.95948, 0, -0.671702, -0.334611, 3.66188, -72.8249, 53.0958, -148.608)
+transform = Transform3D(0.722484, 0.359908, 3.4045, -0.163808, 2.95948, 0, -0.671702, -0.334611, 3.66188, -72.8249, 17.1607, -148.608)
 
 [node name="rock_big17" parent="." instance=ExtResource("1_4c444")]
 transform = Transform3D(0.771426, 1.84524, 9.47256e-09, -0.793611, 0.331779, 1.80558, 1.66586, -0.696434, 0.860172, -111.279, 53.0401, -149.414)
@@ -143,7 +143,7 @@ navigation_mesh = SubResource("NavigationMesh_j61et")
 transform = Transform3D(4.162, 0, 0, 0, 4.162, 0, 0, 0, 4.162, -1.58673, 1.48132, 6.09381)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Node3D"]
-transform = Transform3D(19.8339, -0.193582, -2.56488, 0.0482124, 19.9678, -1.13423, 2.57172, 1.11862, 19.8024, 0.101405, -10.2757, 83.0109)
+transform = Transform3D(19.8339, -0.193582, -2.56488, 0.0482124, 19.9678, -1.13423, 2.57172, 1.11862, 19.8024, 0.101405, -11.543, 83.0109)
 mesh = SubResource("BoxMesh_l70q0")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/Node3D/MeshInstance3D"]
@@ -198,7 +198,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.44069, 2.87824, 14.2218)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 31.5409, 10.5826, -13.2358)
 
 [node name="rock_big2" parent="Map/Node3D" instance=ExtResource("1_4c444")]
-transform = Transform3D(0.5, 0, 0, 0, 0.11573, 0.486422, 0, -0.486422, 0.11573, -3.70724, 7.99624, -15.317)
+transform = Transform3D(0.5, 0, 0, 0, 0.11573, 0.486422, 0, -0.486422, 0.11573, -3.70724, 1.93569, -15.317)
 
 [node name="MeshInstance3D10" type="MeshInstance3D" parent="Map/Node3D"]
 transform = Transform3D(-1.92646, 0, 0.537369, 0, 0.5, 0, -0.537369, 0, -1.92646, 0, 1.36351, 0)
