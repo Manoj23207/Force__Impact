@@ -9,3 +9,6 @@ albedo_color = Color(0.186564, 0.0474824, 0.186566, 1)
 
 [node name="Ground" parent="." index="0"]
 material_override = SubResource("StandardMaterial3D_6e7u2")
+
+[node name="Starlight Sun" parent="." index="18"]
+light_color = Color(2.88235, 3.37255, 2.00392, 1)
