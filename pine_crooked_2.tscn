@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2ul4llqgicj"]
+
+[ext_resource type="PackedScene" uid="uid://7xwlemrso7kk" path="res://assets/resources/Models/GLB format/pine-crooked.glb" id="1_pwn5q"]
+
+[node name="pine-crooked2" instance=ExtResource("1_pwn5q")]
