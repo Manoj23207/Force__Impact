@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsxwapsjm2blt"]
+
+[ext_resource type="PackedScene" uid="uid://beylmx8mc8h0i" path="res://models/SteampunkGun/Steampunk Rifle.glb" id="1_1g8os"]
+
+[node name="Steampunk Rifle" instance=ExtResource("1_1g8os")]

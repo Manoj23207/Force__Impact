@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1pj3m7gjr17y"
-path.s3tc="res://.godot/imported/colormap.png-dc81be80eb8c899049d1f1e829bd3f79.s3tc.ctex"
+uid="uid://c78cns00c6c4s"
+path.s3tc="res://.godot/imported/m_5.png-4a008e4046c921a0ee7c85b644505dff.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/resources/Models/OBJ format/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-dc81be80eb8c899049d1f1e829bd3f79.s3tc.ctex"]
+source_file="res://models/MuzzleFlashes/m_5.png"
+dest_files=["res://.godot/imported/m_5.png-4a008e4046c921a0ee7c85b644505dff.s3tc.ctex"]
 
 [params]
 

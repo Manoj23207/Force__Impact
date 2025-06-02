@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1pj3m7gjr17y"
-path.s3tc="res://.godot/imported/colormap.png-dc81be80eb8c899049d1f1e829bd3f79.s3tc.ctex"
+uid="uid://bghpq66yfe2tv"
+path.s3tc="res://.godot/imported/steampunk_rifle_2.png-43174930ab394468db547be2207376e7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/resources/Models/OBJ format/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-dc81be80eb8c899049d1f1e829bd3f79.s3tc.ctex"]
+source_file="res://models/SteampunkAuto/steampunk_rifle_2.png"
+dest_files=["res://.godot/imported/steampunk_rifle_2.png-43174930ab394468db547be2207376e7.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +21,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://Models/SteampunkAuto/steampunk_rifle_2.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
