@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://db2h3t17k37pe"]
+[gd_scene load_steps=46 format=4 uid="uid://db2h3t17k37pe"]
 
 [ext_resource type="Texture2D" uid="uid://difglsmbfmw81" path="res://Textures/terrain.jpg" id="1_v880l"]
 [ext_resource type="Script" uid="uid://exisb4jhicks" path="res://Scripts/World.gd" id="1_yrgup"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://igrc84teqrtw" path="res://scenes/Zombie.tscn" id="30_sjy1s"]
 [ext_resource type="PackedScene" uid="uid://5iurrb07epis" path="res://scenes/Player.tscn" id="31_jumwc"]
 [ext_resource type="Shader" uid="uid://bae0ggdep5xkb" path="res://Shaders/fog.gdshader" id="34_irg3d"]
+[ext_resource type="PackedScene" uid="uid://ckhu872agka67" path="res://Scenes/WaterShader.tscn" id="35_irg3d"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mq4nq"]
 shader = ExtResource("3_ao4cr")
@@ -53,7 +54,7 @@ volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.403922, 0.247059, 0.215686, 1)
 volumetric_fog_emission = Color(0.20094, 0.499528, 0.852123, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_371b6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n1aqv"]
 render_priority = 0
 shader = ExtResource("26_cnc6k")
 shader_parameter/player_pos = Vector3(1e+06, 1e+06, 1e+06)
@@ -85,7 +86,7 @@ _surfaces = [{
 "format": 34359742491,
 "index_count": 12,
 "index_data": PackedByteArray("AAABAAIAAwABAAAABAAFAAYABwAFAAQA"),
-"material": SubResource("ShaderMaterial_371b6"),
+"material": SubResource("ShaderMaterial_n1aqv"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -3115,6 +3116,54 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.7, 
 [node name="brickWall" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 17)
 
+[node name="brickWall175" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 2.81213, -0.473531, 12.7556)
+
+[node name="brickWall183" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-1.99948, 0, 0.0454444, 0, 2, 0, -0.0454444, 0, -1.99948, 2.7704, -0.473532, 12.6851)
+
+[node name="brickWall184" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-1.9975, 0, 0.1, 0, 2, 0, -0.1, 0, -1.9975, 1.53339, -0.473531, 12.6319)
+
+[node name="brickWall186" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-1.9975, 0, 0.1, 0, 2, 0, -0.1, 0, -1.9975, 0.620729, -0.473531, 12.6154)
+
+[node name="brickWall187" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-1.9975, 0, 0.1, 0, 2, 0, -0.1, 0, -1.9975, 0.836814, -0.473531, 18.776)
+
+[node name="brickWall189" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-1.9975, 0, 0.1, 0, 2, 0, -0.1, 0, -1.9975, -0.437844, -0.473531, 18.7218)
+
+[node name="brickWall190" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-1.9975, 0, 0.1, 0, 2, 0, -0.1, 0, -1.9975, -1.40828, -0.473531, 18.6467)
+
+[node name="brickWall188" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-1.9975, 0, 0.1, 0, 2, 0, -0.1, 0, -1.9975, 2.69412, -0.473531, 18.8416)
+
+[node name="brickWall185" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-1.9975, 0, 0.1, 0, 2, 0, -0.1, 0, -1.9975, -1.27654, -0.491859, 12.5292)
+
+[node name="brickWall176" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 2.81901, -0.473531, 14.0423)
+
+[node name="brickWall178" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 2.81778, -0.473531, 15.3768)
+
+[node name="brickWall179" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -3.18829, -0.473531, 15.3768)
+
+[node name="brickWall180" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -3.18829, -0.473531, 13.8863)
+
+[node name="brickWall182" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -3.18829, -0.473531, 12.5875)
+
+[node name="brickWall181" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -3.18829, -0.473531, 16.8452)
+
+[node name="brickWall177" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 2.83088, -0.473531, 17.1062)
+
 [node name="brickWall2" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("5_diqle")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 15)
 
@@ -3930,5 +3979,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 17)
 [node name="FogVolume" type="FogVolume" parent="."]
 size = Vector3(150, 0.3, 150)
 material = SubResource("ShaderMaterial_y8a40")
+
+[node name="Node3D" parent="." instance=ExtResource("35_irg3d")]
+transform = Transform3D(0.284457, -0.0953106, 0, 0.0953106, 0.284457, 0, 0, 0, 0.3, 0, 0, 15.4524)
 
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]
