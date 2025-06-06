@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyq5hdgbjny6k"]
-
-[ext_resource type="PackedScene" uid="uid://h41lrahiywie" path="res://scenes/Desert_materials/tree.glb" id="1_brfkd"]
-
-[node name="Sketchfab_Scene" instance=ExtResource("1_brfkd")]

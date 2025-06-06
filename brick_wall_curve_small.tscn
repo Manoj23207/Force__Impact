@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cppch65bklol8"]
-
-[ext_resource type="PackedScene" uid="uid://dfwtpst77bkdn" path="res://assets/resources/Models/FBX format/brick-wall-curve-small.fbx" id="1_7lr0b"]
-
-[node name="brick-wall-curve-small" instance=ExtResource("1_7lr0b")]

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bghpq66yfe2tv"
-path.s3tc="res://.godot/imported/steampunk_rifle_2.png-43174930ab394468db547be2207376e7.s3tc.ctex"
+path.s3tc="res://.godot/imported/steampunk_rifle_2.png-19c5881362d6a913ed66002fb227c6cc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://models/SteampunkAuto/steampunk_rifle_2.png"
-dest_files=["res://.godot/imported/steampunk_rifle_2.png-43174930ab394468db547be2207376e7.s3tc.ctex"]
+source_file="res://Models/SteampunkAuto/steampunk_rifle_2.png"
+dest_files=["res://.godot/imported/steampunk_rifle_2.png-19c5881362d6a913ed66002fb227c6cc.s3tc.ctex"]
 
 [params]
 

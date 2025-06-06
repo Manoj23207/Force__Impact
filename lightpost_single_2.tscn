@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgyt4a365itmb"]
-
-[ext_resource type="PackedScene" uid="uid://c5eff1tk58xfk" path="res://assets/resources/Models/GLB format/lightpost-single.glb" id="1_oyq17"]
-
-[node name="lightpost-single2" instance=ExtResource("1_oyq17")]

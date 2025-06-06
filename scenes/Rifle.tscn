@@ -1,6 +1,6 @@
-[gd_scene load_steps=70 format=4 uid="uid://dy5xe6urterbj"]
+[gd_scene load_steps=70 format=4 uid="uid://bqpwh2qhltcpn"]
 
-[ext_resource type="PackedScene" uid="uid://beylmx8mc8h0i" path="res://models/SteampunkGun/Steampunk Rifle.glb" id="1_3vau2"]
+[ext_resource type="PackedScene" uid="uid://beylmx8mc8h0i" path="res://Models/SteampunkGun/Steampunk Rifle.glb" id="1_3vau2"]
 
 [sub_resource type="Animation" id="Animation_yh62p"]
 resource_name = "Shoot"

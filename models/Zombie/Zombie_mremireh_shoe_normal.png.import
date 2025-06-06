@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1tgbaswfvh2b"
-path.s3tc="res://.godot/imported/Zombie_mremireh_shoe_normal.png-12ba9a1c817d5d1d58e64c54a0ac75ab.s3tc.ctex"
+path.s3tc="res://.godot/imported/Zombie_mremireh_shoe_normal.png-a792c9e78d9e852233f94d4f51501a34.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://models/Zombie/Zombie_mremireh_shoe_normal.png"
-dest_files=["res://.godot/imported/Zombie_mremireh_shoe_normal.png-12ba9a1c817d5d1d58e64c54a0ac75ab.s3tc.ctex"]
+source_file="res://Models/Zombie/Zombie_mremireh_shoe_normal.png"
+dest_files=["res://.godot/imported/Zombie_mremireh_shoe_normal.png-a792c9e78d9e852233f94d4f51501a34.s3tc.ctex"]
 
 [params]
 
