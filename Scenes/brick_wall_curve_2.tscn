@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd6d3blvquocc"]
+
+[ext_resource type="PackedScene" uid="uid://cbht5kavju0kw" path="res://Models/BrickWall/brick-wall-curve.glb" id="1_hbdl7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbdl7"]
+albedo_color = Color(0.411765, 0.192157, 0.172549, 1)
+
+[node name="brick-wall-curve2" instance=ExtResource("1_hbdl7")]
+
+[node name="brick-wall-curve" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_hbdl7")
