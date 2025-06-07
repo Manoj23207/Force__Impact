@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://i0dweripmrhn"]
+[gd_scene load_steps=3 format=3 uid="uid://i0dweripmrhn"]
 
 [ext_resource type="Script" uid="uid://d2be72o8q6duh" path="res://Mainmenu.gd" id="1_qoqlk"]
+[ext_resource type="Texture2D" uid="uid://sg6lxl8i6fid" path="res://Textures/Background.jpg" id="2_eiy7p"]
 
 [node name="Mainmenu" type="Control"]
 layout_mode = 3
@@ -18,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_eiy7p")
 stretch_mode = 6
 
 [node name="Force_Impact" type="VBoxContainer" parent="."]
@@ -48,7 +50,6 @@ layout_mode = 2
 text = "         Start    Game         "
 
 [node name="CenterContainer2" type="CenterContainer" parent="."]
-visible = false
 layout_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -60,6 +61,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Menu Buttons" type="VBoxContainer" parent="CenterContainer2"]
+visible = false
 layout_mode = 2
 
 [node name="Play" type="Button" parent="CenterContainer2/Menu Buttons"]

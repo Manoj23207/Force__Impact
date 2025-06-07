@@ -20,7 +20,7 @@ polygons = [PackedInt32Array(0, 1, 22), PackedInt32Array(1, 23, 22), PackedInt32
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.939609, 0.34225, 0, -0.34225, 0.939609, 0, 0, 0, 1, 2.5045, 0.569258, -2.07509)
+transform = Transform3D(0.999722, 0.0235775, 0, -0.0235775, 0.999722, 0, 0, 0, 1, 2.5045, 0.569258, -2.07509)
 mesh = SubResource("PlaneMesh_w8wpw")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="MeshInstance3D"]

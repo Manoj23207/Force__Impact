@@ -2,10 +2,10 @@ extends CanvasLayer
 
 @onready var start_button = $CenterContainer/MenuButtons/StartGame
 @onready var sub_menu = $CenterContainer2/MenuButtons
-@onready var play_button = sub_menu/Play
-@onready var about_button = sub_menu/About
-@onready var settings_button = sub_menu/Settings
-@onready var quit_button = sub_menu/Quit
+@onready var play_button = $"CenterContainer2/Menu Buttons/Play"
+@onready var about_button = $"CenterContainer2/Menu Buttons/About"
+@onready var settings_button = $"CenterContainer2/Menu Buttons/Settings"
+@onready var quit_button = $"CenterContainer2/Menu Buttons/Quit"
 # Optional: If you have a settings menu and music player node
 @onready var settings_menu = $SettingsMenu
 @onready var music_toggle = settings_menu/VBoxContainer/MusicToggle
