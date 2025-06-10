@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://db2h3t17k37pe"]
+[gd_scene load_steps=49 format=4 uid="uid://db2h3t17k37pe"]
 
 [ext_resource type="Texture2D" uid="uid://difglsmbfmw81" path="res://Textures/terrain.jpg" id="1_v880l"]
 [ext_resource type="Script" uid="uid://exisb4jhicks" path="res://Scripts/World.gd" id="1_yrgup"]
@@ -36,6 +36,8 @@
 [ext_resource type="Script" uid="uid://1pu408mtjuk6" path="res://Scenes/spawns.gd" id="33_y8a40"]
 [ext_resource type="Shader" uid="uid://bae0ggdep5xkb" path="res://Shaders/fog.gdshader" id="34_irg3d"]
 [ext_resource type="PackedScene" uid="uid://ckhu872agka67" path="res://Scenes/WaterShader.tscn" id="35_irg3d"]
+[ext_resource type="PackedScene" uid="uid://dv4j3pljbvlkb" path="res://Models/Scenes/VFX_ElectricRay_blue.tscn" id="37_n1aqv"]
+[ext_resource type="PackedScene" uid="uid://bhccvxpb1rbsw" path="res://Models/Scenes/VFX_ElectricRays_Fast_Yellow.tscn" id="38_d2jk0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mq4nq"]
 shader = ExtResource("3_ao4cr")
@@ -55,7 +57,7 @@ volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.403922, 0.247059, 0.215686, 1)
 volumetric_fog_emission = Color(0.20094, 0.499528, 0.852123, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_n1aqv"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2jk0"]
 render_priority = 0
 shader = ExtResource("26_cnc6k")
 shader_parameter/player_pos = Vector3(1e+06, 1e+06, 1e+06)
@@ -87,7 +89,7 @@ _surfaces = [{
 "format": 34359742491,
 "index_count": 12,
 "index_data": PackedByteArray("AAABAAIAAwABAAAABAAFAAYABwAFAAQA"),
-"material": SubResource("ShaderMaterial_n1aqv"),
+"material": SubResource("ShaderMaterial_d2jk0"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -3905,10 +3907,10 @@ radial_segments = 100
 rings = 12
 
 [node name="Spawns" type="Node3D" parent="Map"]
-script = ExtResource("33_y8a40")
 
 [node name="Spawn1" type="Node3D" parent="Map/Spawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -1)
+script = ExtResource("33_y8a40")
 
 [node name="Spawn2" type="Node3D" parent="Map/Spawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -5)
@@ -3954,7 +3956,6 @@ offset_bottom = 40.0
 mouse_filter = 2
 
 [node name="HitRect" type="ColorRect" parent="UI"]
-visible = false
 layout_mode = 0
 offset_left = -878.0
 offset_top = -555.0
@@ -3983,7 +3984,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 17)
 size = Vector3(150, 0.7, 150)
 material = SubResource("ShaderMaterial_y8a40")
 
-[node name="Node3D" parent="." instance=ExtResource("35_irg3d")]
+[node name="Water" parent="." instance=ExtResource("35_irg3d")]
 transform = Transform3D(0.299966, -0.00449225, 0, 0.00449225, 0.299966, 0, 0, 0, 0.3, 0, 0.387832, 15.4524)
+
+[node name="VFX_thunder_blue" parent="." instance=ExtResource("37_n1aqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0904, -0.364142, 9.9039)
+
+[node name="VFX_thunder_blue2" parent="." instance=ExtResource("37_n1aqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0904, -0.364142, -8.8343)
+
+[node name="VFX_thunder_yellowFast" parent="." instance=ExtResource("38_d2jk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.801, 0.00950241, 7.49591)
+
+[node name="VFX_thunder_yellowFast2" parent="." instance=ExtResource("38_d2jk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.801, 0.00950241, 11.3258)
 
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]

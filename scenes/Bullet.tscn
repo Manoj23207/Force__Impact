@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://yn400ram7bxt"]
 
-[ext_resource type="Script" path="res://Scripts/Bullet.gd" id="1_lc6tw"]
+[ext_resource type="Script" uid="uid://cxpvqt2ejlpcy" path="res://Scripts/Bullet.gd" id="1_lc6tw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_m767h"]
 size = Vector3(0.05, 0.05, 1)
@@ -13,16 +13,16 @@ emission_energy_multiplier = 8.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7cvc"]
 transparency = 1
-albedo_color = Color(0.945098, 1, 0.301961, 0.662745)
+albedo_color = Color(0.929606, 0.985915, 6.62279e-05, 0.662745)
 emission_enabled = true
-emission = Color(0.184314, 0.87451, 0, 1)
+emission = Color(2.02149e-06, 0.836206, 0.690395, 1)
 emission_energy_multiplier = 10.0
 refraction_enabled = true
 grow = true
 grow_amount = 0.01
 
 [sub_resource type="Curve" id="Curve_661dr"]
-max_value = 1.5
+_limits = [0.0, 1.5, 0.0, 1.0]
 _data = [Vector2(0, 0.642105), 0.0, 0.0, 0, 0, Vector2(0.21123, 1.23158), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
@@ -57,9 +57,9 @@ emission_shape = 1
 emission_sphere_radius = 0.1
 direction = Vector3(0, 0, -1)
 spread = 10.0
-gravity = Vector3(0, 0.5, 0)
 initial_velocity_min = 1.0
 initial_velocity_max = 2.0
+gravity = Vector3(0, 0.5, 0)
 scale_min = 0.5
 scale_curve = SubResource("CurveTexture_jouu8")
 

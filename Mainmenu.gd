@@ -1,15 +1,14 @@
-extends CanvasLayer
+extends Control
 
-@onready var start_button = $CenterContainer/MenuButtons/StartGame
+@onready var start_button = $"CenterContainer/MenuButtons/StartGame"
 @onready var sub_menu = $CenterContainer2/MenuButtons
-@onready var play_button = $"CenterContainer2/Menu Buttons/Play"
-@onready var about_button = $"CenterContainer2/Menu Buttons/About"
-@onready var settings_button = $"CenterContainer2/Menu Buttons/Settings"
-@onready var quit_button = $"CenterContainer2/Menu Buttons/Quit"
+@onready var play_button = $"CenterContainer2/MenuButtons/Play"
+@onready var about_button = $"CenterContainer2/MenuButtons/About"
+@onready var settings_button = $"CenterContainer2/MenuButtons/Settings"
+@onready var quit_button = $"CenterContainer2/MenuButtons/Quit"
 # Optional: If you have a settings menu and music player node
 @onready var settings_menu = $SettingsMenu
-@onready var music_toggle = settings_menu/VBoxContainer/MusicToggle
-@onready var music_player = $MusicPlayer
+
 
 func _ready():
 	start_button.pressed.connect(_on_start_pressed)
@@ -17,16 +16,14 @@ func _ready():
 	about_button.pressed.connect(_on_about_pressed)
 	settings_button.pressed.connect(_on_settings_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
-	
-	if music_toggle:
-		music_toggle.toggled.connect(_on_music_toggled)
+
 
 func _on_start_pressed():
 	start_button.hide()
 	sub_menu.show()
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://YourGameScene.tscn")  # Change to your actual path
+	get_tree().change_scene_to_file("res://Scenes/World.tscn")  # Change to your actual path
 
 func _on_settings_pressed():
 	settings_menu.show()
@@ -36,9 +33,3 @@ func _on_about_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
-
-func _on_music_toggled(button_pressed: bool):
-	if button_pressed:
-		music_player.play()
-	else:
-		music_player.stop()

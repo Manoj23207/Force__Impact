@@ -1,0 +1,582 @@
+[gd_scene load_steps=56 format=3 uid="uid://bphjy5u5ferik"]
+
+[ext_resource type="PackedScene" uid="uid://dv4j3pljbvlkb" path="res://Models/Scenes/VFX_ElectricRay_blue.tscn" id="1_nkr8k"]
+[ext_resource type="PackedScene" uid="uid://dldf40c3pg7ns" path="res://Models/Scenes/VFX_ElectricRays_red.tscn" id="2_5c7kh"]
+[ext_resource type="Shader" uid="uid://dl07q7hrt6tsk" path="res://Models/Shaders/s_special_shader.tres" id="2_udpuv"]
+[ext_resource type="PackedScene" uid="uid://bhccvxpb1rbsw" path="res://Models/Scenes/VFX_ElectricRays_Fast_Yellow.tscn" id="3_23moh"]
+[ext_resource type="Gradient" uid="uid://dwq218pdidmva" path="res://Models/Textures/gradients/g_electric_red1.tres" id="4_j5ayi"]
+[ext_resource type="Texture2D" uid="uid://c5fp4fv53b2ko" path="res://Models/Textures/T_VFX_Flare_15.PNG" id="6_jivis"]
+[ext_resource type="Shader" uid="uid://binx31u5urrud" path="res://Models/Shaders/s_ChunkOut.tres" id="7_a4nxk"]
+[ext_resource type="Texture2D" uid="uid://b0iov7sqbdawx" path="res://Models/Textures/T_smoke_1.PNG" id="8_wt8j3"]
+[ext_resource type="Shader" uid="uid://bifyyfepoq736" path="res://Models/Shaders/s_mark_solid.tres" id="9_op2a5"]
+[ext_resource type="Texture2D" uid="uid://bq2msmtsk4oxi" path="res://Models/Textures/T_BlastMark_Rock01.PNG" id="10_kbo0u"]
+[ext_resource type="Texture2D" uid="uid://bec8h10wq5c5o" path="res://Models/Textures/T_Electric_d222.png" id="13_53qa8"]
+[ext_resource type="ArrayMesh" uid="uid://c0uxdjhekqmek" path="res://Models/Objects/sm_wave.obj" id="17_frqsa"]
+[ext_resource type="Shader" uid="uid://clyhpjqg50sgi" path="res://Models/Shaders/s_mark_new.tres" id="18_fvyri"]
+[ext_resource type="ArrayMesh" uid="uid://1cc8qpbmltui" path="res://Models/Objects/sm_plane.obj" id="20_58brq"]
+[ext_resource type="ArrayMesh" uid="uid://cyx6m4dciup3u" path="res://Models/Objects/sm_bemdad1.obj" id="22_aswvr"]
+[ext_resource type="Texture2D" uid="uid://bcirutqtars8y" path="res://Models/Textures/T_BlastMark.PNG" id="23_r8sip"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr2h1"]
+albedo_color = Color(0.368627, 0.368627, 0.368627, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_7iubp"]
+material = SubResource("StandardMaterial3D_jr2h1")
+size = Vector2(120, 50)
+
+[sub_resource type="Animation" id="Animation_vwh7p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VFX_thunder_yellowFast:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2/p_thunder:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2/p_wave:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2/p_markSoil:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2/p_markSoil2:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2/GPUParticles3D:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_oy2lh"]
+resource_name = "moving thunder"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VFX_thunder_yellowFast:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.9, 2.4, 2.7, 3.4, 4.1, 4.5, 6.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-13.4002, 0, 0), Vector3(-7.90397, 0, 2.1812), Vector3(-2.40774, 0, -2.53181), Vector3(6.53541, 0, 1.09374), Vector3(12.1583, 0, -2.89853), Vector3(19.5772, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_51lli"]
+resource_name = "red thudner 1"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2/p_thunder:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true, true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2/p_wave:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true, true, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2/p_markSoil:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true, true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2/p_markSoil2:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true, true, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2/GPUParticles3D:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true, true, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("3 Red Rays to ball/VFX_thunderSingle2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.3, 1.8, 2.3, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-6.17626, 0, 5.19194), Vector3(6.46209, 0, 4.88461), Vector3(6.74759, 0, -3.59138), Vector3(-6.61272, 0, -3.15365), Vector3(-2.73167, 0, 1.13744), Vector3(4.09228, 1.90735e-06, -2.77126)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1rtcf"]
+_data = {
+&"RESET": SubResource("Animation_vwh7p"),
+&"moving thunder": SubResource("Animation_oy2lh"),
+&"red thudner 1": SubResource("Animation_51lli")
+}
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_has3e"]
+sky_top_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="Sky" id="Sky_sx3ct"]
+sky_material = SubResource("ProceduralSkyMaterial_has3e")
+
+[sub_resource type="Environment" id="Environment_yegtu"]
+background_mode = 2
+background_energy_multiplier = 0.4
+sky = SubResource("Sky_sx3ct")
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.4
+glow_strength = 0.8
+glow_blend_mode = 1
+volumetric_fog_density = 0.02
+volumetric_fog_albedo = Color(0.639216, 0.639216, 0.639216, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fsw2c"]
+gradient = ExtResource("4_j5ayi")
+use_hdr = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_665s8"]
+render_priority = 0
+shader = ExtResource("2_udpuv")
+shader_parameter/Speed = Vector2(0, 0.5)
+shader_parameter/Texture2DParameter = ExtResource("13_53qa8")
+shader_parameter/Texture2DParameter2 = SubResource("GradientTexture1D_fsw2c")
+
+[sub_resource type="Gradient" id="Gradient_xi40f"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i4wek"]
+gradient = SubResource("Gradient_xi40f")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_512rx"]
+particle_flag_rotate_y = true
+gravity = Vector3(0, 0, 0)
+scale_min = 0.98
+scale_max = 1.01
+color_ramp = SubResource("GradientTexture1D_i4wek")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_78865"]
+render_priority = 0
+shader = ExtResource("7_a4nxk")
+shader_parameter/ColorParameter = Color(4, 0.5, 0.5, 1)
+shader_parameter/speed = Vector2(0, -1)
+shader_parameter/Texture2DParameter = ExtResource("8_wt8j3")
+
+[sub_resource type="Gradient" id="Gradient_1ccbf"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_b3s5b"]
+gradient = SubResource("Gradient_1ccbf")
+
+[sub_resource type="Curve" id="Curve_p5gvb"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 4.66229, 0, 0, Vector2(1, 1.65698), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_bln34"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_fj3ox"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 4.80698, 0, 0, Vector2(1, 1.60465), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_jmlqu"]
+curve_x = SubResource("Curve_p5gvb")
+curve_y = SubResource("Curve_bln34")
+curve_z = SubResource("Curve_fj3ox")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tdtr0"]
+lifetime_randomness = 0.1
+particle_flag_rotate_y = true
+gravity = Vector3(0, 0, 0)
+scale_min = 0.8
+scale_max = 1.2
+scale_curve = SubResource("CurveXYZTexture_jmlqu")
+color_ramp = SubResource("GradientTexture1D_b3s5b")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_31u47"]
+render_priority = 0
+shader = ExtResource("18_fvyri")
+shader_parameter/Texture2DParameter = ExtResource("23_r8sip")
+
+[sub_resource type="Curve" id="Curve_ky4dl"]
+_data = [Vector2(0, 1), 0.0, -1.44734, 0, 0, Vector2(0.802469, 0.693685), -0.572573, -0.572573, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_d4xn8"]
+curve = SubResource("Curve_ky4dl")
+
+[sub_resource type="Gradient" id="Gradient_h4l0q"]
+colors = PackedColorArray(0.442501, 9.3855e-07, 2.16588e-07, 1, 3, 0.5, 0.5, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rk58r"]
+gradient = SubResource("Gradient_h4l0q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ghjnu"]
+particle_flag_rotate_y = true
+angle_min = -180.0
+angle_max = 180.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 1.5
+color_ramp = SubResource("GradientTexture1D_rk58r")
+alpha_curve = SubResource("CurveTexture_d4xn8")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_at5lm"]
+render_priority = 0
+shader = ExtResource("9_op2a5")
+shader_parameter/Texture2DParameter = ExtResource("10_kbo0u")
+
+[sub_resource type="Curve" id="Curve_stwc1"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.777778, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_4is0n"]
+curve = SubResource("Curve_stwc1")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5ugi0"]
+particle_flag_rotate_y = true
+angle_min = -160.0
+angle_max = -155.0
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 6.0
+color = Color(0.439216, 0.439216, 0.439216, 1)
+alpha_curve = SubResource("CurveTexture_4is0n")
+
+[sub_resource type="Curve" id="Curve_l2gik"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.240339), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8rtb7"]
+curve = SubResource("Curve_l2gik")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fednr"]
+emission_shape = 1
+emission_sphere_radius = 0.5
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, -60, 0)
+scale_curve = SubResource("CurveTexture_8rtb7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2icge"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+albedo_color = Color(15.298, 0, 0, 1)
+albedo_texture = ExtResource("6_jivis")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_hx8b6"]
+material = SubResource("StandardMaterial3D_2icge")
+shape = 0
+size = 0.5
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4rw5h"]
+particle_flag_rotate_y = true
+angle_min = 90.0
+angle_max = 90.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.98
+scale_max = 1.01
+color_ramp = SubResource("GradientTexture1D_i4wek")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_87hgh"]
+particle_flag_rotate_y = true
+angle_min = -90.0
+angle_max = -90.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.98
+scale_max = 1.01
+color_ramp = SubResource("GradientTexture1D_i4wek")
+
+[node name="Map 1" type="Node"]
+
+[node name="Floor" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.0408058, -10.0065)
+mesh = SubResource("QuadMesh_7iubp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1rtcf")
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yegtu")
+
+[node name="VFX_thunder_blue" parent="." instance=ExtResource("1_nkr8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1313, 0, 0)
+
+[node name="VFX_thunder_red1" parent="." instance=ExtResource("2_5c7kh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7837, 0, 0)
+
+[node name="VFX_thunder_yellowFast" parent="." instance=ExtResource("3_23moh")]
+
+[node name="3 Red Rays to ball" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5563, 0, -6.44283)
+
+[node name="VFX_thunderSingle2" type="Node3D" parent="3 Red Rays to ball"]
+
+[node name="p_thunder" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle2"]
+material_override = SubResource("ShaderMaterial_665s8")
+emitting = false
+amount = 1
+lifetime = 2.1
+speed_scale = 10.5
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_512rx")
+draw_pass_1 = ExtResource("22_aswvr")
+
+[node name="p_wave" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle2"]
+material_override = SubResource("ShaderMaterial_78865")
+emitting = false
+amount = 1
+lifetime = 0.3
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_tdtr0")
+draw_pass_1 = ExtResource("17_frqsa")
+
+[node name="p_markSoil" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle2"]
+material_override = SubResource("ShaderMaterial_31u47")
+emitting = false
+amount = 2
+lifetime = 0.3
+randomness = 0.09
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_ghjnu")
+draw_pass_1 = ExtResource("20_58brq")
+
+[node name="p_markSoil2" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle2"]
+sorting_offset = -1.0
+material_override = SubResource("ShaderMaterial_at5lm")
+emitting = false
+amount = 5
+randomness = 0.09
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_5ugi0")
+draw_pass_1 = ExtResource("20_58brq")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle2"]
+emitting = false
+amount = 20
+lifetime = 0.5
+explosiveness = 0.6
+randomness = 1.0
+fixed_fps = 60
+trail_enabled = true
+trail_lifetime = 0.08
+process_material = SubResource("ParticleProcessMaterial_fednr")
+draw_pass_1 = SubResource("RibbonTrailMesh_hx8b6")
+
+[node name="VFX_thunderSingle3" type="Node3D" parent="3 Red Rays to ball"]
+transform = Transform3D(0.0297011, 0, -0.999559, 0, 1, 0, 0.999559, 0, 0.0297011, 11.4543, 0, -12.7784)
+
+[node name="p_thunder" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle3"]
+material_override = SubResource("ShaderMaterial_665s8")
+amount = 1
+lifetime = 2.1
+speed_scale = 10.5
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_4rw5h")
+draw_pass_1 = ExtResource("22_aswvr")
+
+[node name="p_wave" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle3"]
+visible = false
+material_override = SubResource("ShaderMaterial_78865")
+amount = 1
+lifetime = 0.3
+explosiveness = 1.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_tdtr0")
+draw_pass_1 = ExtResource("17_frqsa")
+
+[node name="p_markSoil" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle3"]
+material_override = SubResource("ShaderMaterial_31u47")
+amount = 2
+lifetime = 0.3
+randomness = 0.09
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_ghjnu")
+draw_pass_1 = ExtResource("20_58brq")
+
+[node name="p_markSoil2" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle3"]
+sorting_offset = -1.0
+material_override = SubResource("ShaderMaterial_at5lm")
+amount = 5
+randomness = 0.09
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_5ugi0")
+draw_pass_1 = ExtResource("20_58brq")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle3"]
+visible = false
+amount = 20
+lifetime = 0.5
+explosiveness = 0.6
+randomness = 1.0
+fixed_fps = 60
+trail_enabled = true
+trail_lifetime = 0.08
+process_material = SubResource("ParticleProcessMaterial_fednr")
+draw_pass_1 = SubResource("RibbonTrailMesh_hx8b6")
+
+[node name="VFX_thunderSingle4" type="Node3D" parent="3 Red Rays to ball"]
+transform = Transform3D(0.0297011, 0, -0.999559, 0, 1, 0, 0.999559, 0, 0.0297011, -12.7367, 0, -12.7784)
+
+[node name="p_thunder" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle4"]
+material_override = SubResource("ShaderMaterial_665s8")
+amount = 1
+lifetime = 2.1
+speed_scale = 10.5
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_87hgh")
+draw_pass_1 = ExtResource("22_aswvr")
+
+[node name="p_wave" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle4"]
+visible = false
+material_override = SubResource("ShaderMaterial_78865")
+amount = 1
+lifetime = 0.3
+explosiveness = 1.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_tdtr0")
+draw_pass_1 = ExtResource("17_frqsa")
+
+[node name="p_markSoil" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle4"]
+material_override = SubResource("ShaderMaterial_31u47")
+amount = 2
+lifetime = 0.3
+randomness = 0.09
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_ghjnu")
+draw_pass_1 = ExtResource("20_58brq")
+
+[node name="p_markSoil2" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle4"]
+sorting_offset = -1.0
+material_override = SubResource("ShaderMaterial_at5lm")
+amount = 5
+randomness = 0.09
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_5ugi0")
+draw_pass_1 = ExtResource("20_58brq")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="3 Red Rays to ball/VFX_thunderSingle4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.821163, 1.52539, -12.576)
+amount = 20
+lifetime = 0.5
+explosiveness = 0.6
+randomness = 1.0
+fixed_fps = 60
+trail_enabled = true
+trail_lifetime = 0.08
+process_material = SubResource("ParticleProcessMaterial_fednr")
+draw_pass_1 = SubResource("RibbonTrailMesh_hx8b6")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="3 Red Rays to ball"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.267514, 2.30643, -12)
+radius = 2.0

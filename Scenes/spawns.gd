@@ -5,7 +5,7 @@ extends Node3D
 @export var max_zombies: int = 5  # Maximum number of zombies at a time
 
 var player: Node3D
-@onready var spawn_timer: Timer = $SpawnTimer  # Reference to the SpawnTimer node
+@onready var spawn_timer: Timer = $Map/Spawns/Spawn1 # Reference to the SpawnTimer node
 
 func _ready():
 	# Get the player node
@@ -15,15 +15,15 @@ func _ready():
 	
 	# Ensure the timer is set up
 	if spawn_timer == null:
-		print("Error: SpawnTimer node not found! Please add a Timer node as a child of ZombieSpawner.")
+		print("Error: SpawnTimer node not found! Please add a Timer node as a child of Spawns.")
 	else:
 		spawn_timer.wait_time = 5.0  # Spawn every 5 seconds
 		spawn_timer.autostart = true
 		spawn_timer.one_shot = false  # Keep spawning continuously
 
-func spawn_zombie(position: Vector3):
+func spawn_zombie(spawn_pos: Vector3):  # Renamed parameter to avoid shadowing
 	var zombie_instance = zombie_scene.instantiate()
-	zombie_instance.global_position = position
+	zombie_instance.global_position = spawn_pos
 	add_child(zombie_instance)
 	zombie_instance.set_player(player)
 

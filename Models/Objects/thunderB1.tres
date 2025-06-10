@@ -1,0 +1,63 @@
+[gd_resource type="ArrayMesh" load_steps=9 format=3 uid="uid://dvly8i7gb8adv"]
+
+[ext_resource type="Shader" uid="uid://0b6x2ceyllpm" path="res://VFX/Shaders/s_special_shader.tres" id="1_3jeql"]
+[ext_resource type="Texture2D" uid="uid://bec8h10wq5c5o" path="res://VFX/Textures/T_Electric_d222.png" id="2_nvvh2"]
+[ext_resource type="Shader" uid="uid://dspnkvhi51h6m" path="res://VFX/Shaders/s_mark.tres" id="3_b0psl"]
+[ext_resource type="Texture2D" uid="uid://bg1e1ogoqg5c" path="res://VFX/Textures/T_VFX_Flare_3.PNG" id="4_g58lo"]
+[ext_resource type="Shader" uid="uid://binx31u5urrud" path="res://VFX/Shaders/s_ChunkOut.tres" id="5_6oq66"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ousfx"]
+render_priority = 0
+shader = ExtResource("1_3jeql")
+shader_parameter/Texture2DParameter = ExtResource("2_nvvh2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1f04s"]
+render_priority = 0
+shader = ExtResource("3_b0psl")
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
+shader_parameter/Texture2DParameter = ExtResource("4_g58lo")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2fuoh"]
+render_priority = 0
+shader = ExtResource("5_6oq66")
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
+shader_parameter/speed = Vector2(0, -1)
+
+[resource]
+_surfaces = [{
+"aabb": AABB(-2.01083, -0.485416, -0.466861, 3.3979, 11.2843, 1.14655),
+"attribute_data": PackedByteArray(255, 255, 69, 23, 0, 0, 69, 23, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 185, 232, 0, 0, 185, 232, 255, 255, 115, 209, 0, 0, 115, 209, 255, 255, 45, 186, 0, 0, 45, 186, 255, 255, 232, 162, 0, 0, 232, 162, 255, 255, 162, 139, 0, 0, 162, 139, 255, 255, 92, 116, 0, 0, 92, 116, 255, 255, 22, 93, 0, 0, 22, 93, 255, 255, 209, 69, 0, 0, 209, 69, 255, 255, 139, 46, 0, 0, 139, 46),
+"format": 34896613399,
+"index_count": 66,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 6, 0, 6, 0, 5, 0, 7, 0, 6, 0, 7, 0, 8, 0, 8, 0, 7, 0, 9, 0, 8, 0, 9, 0, 10, 0, 10, 0, 9, 0, 11, 0, 10, 0, 11, 0, 12, 0, 12, 0, 11, 0, 13, 0, 12, 0, 13, 0, 14, 0, 14, 0, 13, 0, 15, 0, 14, 0, 15, 0, 16, 0, 16, 0, 15, 0, 17, 0, 16, 0, 17, 0, 18, 0, 18, 0, 17, 0, 19, 0, 18, 0, 19, 0, 20, 0, 20, 0, 19, 0, 21, 0, 20, 0, 21, 0, 22, 0, 22, 0, 21, 0, 23, 0, 22, 0, 23, 0, 0, 0, 0, 0, 23, 0, 1, 0),
+"material": SubResource("ShaderMaterial_ousfx"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(62, 225, 100, 233, 142, 161, 210, 143, 67, 109, 14, 229, 36, 11, 121, 143, 146, 203, 255, 255, 96, 112, 147, 140, 53, 80, 108, 251, 119, 64, 93, 140, 131, 156, 112, 0, 231, 101, 145, 134, 162, 124, 0, 0, 224, 100, 134, 134, 167, 190, 75, 21, 124, 75, 179, 140, 245, 111, 54, 20, 122, 126, 64, 140, 166, 187, 165, 41, 90, 33, 56, 149, 16, 95, 130, 40, 65, 202, 202, 149, 112, 180, 238, 62, 4, 19, 105, 153, 92, 89, 242, 61, 144, 241, 103, 153, 227, 177, 22, 83, 211, 57, 45, 150, 50, 71, 110, 82, 255, 255, 170, 148, 83, 160, 69, 101, 2, 117, 237, 142, 92, 23, 244, 100, 61, 250, 97, 141, 85, 142, 201, 122, 7, 132, 17, 137, 0, 0, 168, 121, 79, 171, 26, 137, 55, 164, 46, 150, 170, 113, 215, 137, 240, 29, 0, 149, 7, 93, 61, 136, 141, 228, 5, 179, 225, 140, 82, 142, 214, 88, 163, 179, 0, 0, 19, 141, 255, 255, 169, 205, 156, 203, 117, 145, 132, 128, 62, 205, 24, 3, 120, 145, 9, 90, 127, 240, 74, 83, 87, 241, 14, 71, 177, 234, 157, 72, 188, 233, 15, 86, 142, 14, 164, 87, 167, 14, 243, 103, 45, 9, 132, 105, 58, 9, 91, 116, 165, 3, 117, 118, 241, 2, 217, 119, 246, 2, 26, 121, 247, 2, 131, 138, 25, 4, 161, 142, 195, 9, 48, 172, 200, 32, 168, 179, 42, 44, 67, 214, 173, 70, 145, 211, 167, 73, 73, 216, 128, 180, 25, 227, 164, 158, 120, 156, 126, 222, 50, 169, 7, 203, 251, 121, 159, 251, 166, 115, 244, 254)
+}, {
+"aabb": AABB(-1.47092, 0, -1.47092, 2.94186, 1e-05, 2.94186),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": SubResource("ShaderMaterial_1f04s"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(254, 255, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 254, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(-1.2888, -0.035752, 0, 2.57761, 2.5776, 1e-05),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": SubResource("ShaderMaterial_2fuoh"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 254, 255, 255, 127, 254, 255, 255, 127, 254, 255)
+}]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://ci6hj2dadtl0o"]
 
-[ext_resource type="Script" path="res://Scripts/BulletTrail.gd" id="1_fwi64"]
+[ext_resource type="Script" uid="uid://deece07xkuxvr" path="res://Scripts/BulletTrail.gd" id="1_fwi64"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1u5c"]
 transparency = 1

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://1cc8qpbmltui"
+path="res://.godot/imported/sm_plane.obj-7d633c9ea04f526b2f7d55b7cedcf5c9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sm_plane.obj-7d633c9ea04f526b2f7d55b7cedcf5c9.mesh"]
+
+source_file="res://Models/Objects/sm_plane.obj"
+dest_files=["res://.godot/imported/sm_plane.obj-7d633c9ea04f526b2f7d55b7cedcf5c9.mesh", "res://.godot/imported/sm_plane.obj-7d633c9ea04f526b2f7d55b7cedcf5c9.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

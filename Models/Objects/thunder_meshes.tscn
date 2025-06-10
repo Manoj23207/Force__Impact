@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://fcltdiddyavj"]
+
+[ext_resource type="PackedScene" uid="uid://dp5p53327ru4x" path="res://VFX/Objects/thunder_meshes.glb" id="1_lfopv"]
+[ext_resource type="ArrayMesh" uid="uid://du2ng64uflmhm" path="res://VFX/Objects/new_array_mesh.tres" id="2_0vwcx"]
+
+[node name="thunder_meshes" instance=ExtResource("1_lfopv")]
+
+[node name="Plane" parent="." index="0"]
+mesh = ExtResource("2_0vwcx")

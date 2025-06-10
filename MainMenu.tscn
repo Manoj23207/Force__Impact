@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://i0dweripmrhn"]
+[gd_scene load_steps=3 format=3 uid="uid://b0e4w3tdji1lq"]
 
-[ext_resource type="Script" uid="uid://d2be72o8q6duh" path="res://Mainmenu.gd" id="1_qoqlk"]
+[ext_resource type="Script" uid="uid://cwltwbism2aqq" path="res://Mainmenu.gd" id="1_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://sg6lxl8i6fid" path="res://Textures/Background.jpg" id="2_eiy7p"]
 
-[node name="Mainmenu" type="Control"]
+[node name="Mainmenu2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,6 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,40 +43,37 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Menu Buttons" type="VBoxContainer" parent="CenterContainer"]
+[node name="MenuButtons" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
 
-[node name="Start Game" type="Button" parent="CenterContainer/Menu Buttons"]
+[node name="StartGame" type="Button" parent="CenterContainer/MenuButtons"]
 layout_mode = 2
 text = "         Start    Game         "
 
 [node name="CenterContainer2" type="CenterContainer" parent="."]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = 4.0
-offset_right = 17.0
-offset_bottom = 109.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Menu Buttons" type="VBoxContainer" parent="CenterContainer2"]
+[node name="MenuButtons" type="VBoxContainer" parent="CenterContainer2"]
 visible = false
 layout_mode = 2
 
-[node name="Play" type="Button" parent="CenterContainer2/Menu Buttons"]
+[node name="Play" type="Button" parent="CenterContainer2/MenuButtons"]
 layout_mode = 2
 text = "                   Play                  "
 
-[node name="About" type="Button" parent="CenterContainer2/Menu Buttons"]
+[node name="About" type="Button" parent="CenterContainer2/MenuButtons"]
 layout_mode = 2
 text = "About"
 
-[node name="Settings" type="Button" parent="CenterContainer2/Menu Buttons"]
+[node name="Settings" type="Button" parent="CenterContainer2/MenuButtons"]
 layout_mode = 2
 text = "Settings"
 
-[node name="Quit" type="Button" parent="CenterContainer2/Menu Buttons"]
+[node name="Quit" type="Button" parent="CenterContainer2/MenuButtons"]
 layout_mode = 2
 text = "Quit"
