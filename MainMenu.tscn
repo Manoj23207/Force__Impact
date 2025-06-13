@@ -1,79 +1,79 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0e4w3tdji1lq"]
+[gd_scene load_steps=6 format=3 uid="uid://b0e4w3tdji1lq"]
 
-[ext_resource type="Script" uid="uid://cwltwbism2aqq" path="res://Mainmenu.gd" id="1_qoqlk"]
-[ext_resource type="Texture2D" uid="uid://sg6lxl8i6fid" path="res://Textures/Background.jpg" id="2_eiy7p"]
+[ext_resource type="Script" uid="uid://c2lnubhjcrjhq" path="res://Mainmenu.gd" id="1_qoqlk"]
+[ext_resource type="Texture2D" uid="uid://cxx2hw1dm2twb" path="res://Materials/Background.jpg" id="2_eiy7p"]
+[ext_resource type="PackedScene" uid="uid://dahpl8c2qnp0f" path="res://FadeIn.tscn" id="3_qoqlk"]
+[ext_resource type="PackedScene" uid="uid://dg4orb3rs2alm" path="res://UISound.tscn" id="4_iwfq2"]
+[ext_resource type="PackedScene" uid="uid://jaxb5b4wv07q" path="res://TransitionManager.tscn" id="5_iwfq2"]
 
 [node name="Mainmenu2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 5.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qoqlk")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(635.25, 374)
+scale = Vector2(0.869226, 0.879808)
 texture = ExtResource("2_eiy7p")
-stretch_mode = 6
 
-[node name="Force_Impact" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = 4.0
-offset_right = 6.0
-offset_bottom = 4.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MenuButtons" type="VBoxContainer" parent="CenterContainer"]
+[node name="Menu" type="HBoxContainer" parent="."]
 layout_mode = 2
+offset_left = 142.0
+offset_top = 140.0
+offset_right = 1113.0
+offset_bottom = 622.0
+alignment = 1
 
-[node name="StartGame" type="Button" parent="CenterContainer/MenuButtons"]
+[node name="Buttons" type="VBoxContainer" parent="Menu"]
 layout_mode = 2
-text = "         Start    Game         "
+alignment = 1
 
-[node name="CenterContainer2" type="CenterContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MenuButtons" type="VBoxContainer" parent="CenterContainer2"]
-visible = false
+[node name="Play" type="Button" parent="Menu/Buttons"]
 layout_mode = 2
-
-[node name="Play" type="Button" parent="CenterContainer2/MenuButtons"]
-layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "                   Play                  "
 
-[node name="About" type="Button" parent="CenterContainer2/MenuButtons"]
+[node name="About" type="Button" parent="Menu/Buttons"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "About"
 
-[node name="Settings" type="Button" parent="CenterContainer2/MenuButtons"]
+[node name="Settings" type="Button" parent="Menu/Buttons"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "Settings"
 
-[node name="Quit" type="Button" parent="CenterContainer2/MenuButtons"]
+[node name="Quit" type="Button" parent="Menu/Buttons"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "Quit"
+
+[node name="FadeIn" parent="." instance=ExtResource("3_qoqlk")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 5.0
+offset_right = 2.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UISound" parent="." instance=ExtResource("4_iwfq2")]
+
+[node name="TransitionManager" parent="." instance=ExtResource("5_iwfq2")]
+
+[connection signal="pressed" from="Menu/Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Menu/Buttons/About" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="Menu/Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Menu/Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_fade_in_fade_finished"]

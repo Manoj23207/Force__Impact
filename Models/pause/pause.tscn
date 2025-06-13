@@ -1,0 +1,128 @@
+[gd_scene load_steps=8 format=3 uid="uid://dln6ttdt8iopd"]
+
+[ext_resource type="Script" uid="uid://dmi4n874snlbt" path="res://Models/pause/pause.gd" id="2_aeffn"]
+
+[sub_resource type="Gradient" id="Gradient_k16tc"]
+offsets = PackedFloat32Array(0.1133, 0.684729, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.522222, 0.522222, 0.522222, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_b2h7s"]
+gradient = SubResource("Gradient_k16tc")
+
+[sub_resource type="Animation" id="Animation_5rfcn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(265, 768)]
+}
+
+[sub_resource type="Animation" id="Animation_1drwa"]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(265, 88.5), Vector2(265, 44), Vector2(265, 768)]
+}
+
+[sub_resource type="Animation" id="Animation_1g827"]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(265, 768), Vector2(265, 44), Vector2(265, 88.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fuhf4"]
+_data = {
+&"RESET": SubResource("Animation_5rfcn"),
+&"hide": SubResource("Animation_1drwa"),
+&"show": SubResource("Animation_1g827")
+}
+
+[node name="Pause" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = 408.0
+offset_right = 375.0
+offset_bottom = 951.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_aeffn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(373, 270)
+scale = Vector2(2.91406, 538)
+texture = SubResource("GradientTexture1D_b2h7s")
+
+[node name="Sections" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Buttons" type="VBoxContainer" parent="Sections"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.5
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Resume" type="Button" parent="Sections/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.25
+theme_override_font_sizes/font_size = 42
+text = " RESUME "
+
+[node name="Restart" type="Button" parent="Sections/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.25
+theme_override_font_sizes/font_size = 42
+text = " RESTART "
+
+[node name="Exit" type="Button" parent="Sections/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.25
+theme_override_font_sizes/font_size = 42
+text = "  EXIT  "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fuhf4")
+}
+autoplay = "RESET"
+
+[connection signal="pressed" from="Sections/Buttons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Sections/Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Sections/Buttons/Exit" to="." method="_on_exit_pressed"]

@@ -1,8 +1,11 @@
+res://Scripts
+res://Audio/Player
 res://
+res://Textures/Crosshairs
+res://Scenes
+res://Materials
 res://Audio/Zombie
 res://Models/Scenes
-res://Scripts
-res://Scenes
 res://Textures
 res://Shaders
 res://Models/SteampunkGun

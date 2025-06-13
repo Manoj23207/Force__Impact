@@ -4,6 +4,9 @@ extends Node3D
 @onready var spawns = $Map/Spawns
 @onready var navigation_region = $Map/NavigationRegion3D
 
+@onready var crosshair = $UI/Crosshair
+@onready var crosshair_hit = $UI/CrosshairHit
+
 var zombie = load("res://Scenes/Zombie.tscn")
 var instance
 
@@ -33,3 +36,11 @@ func _on_zombie_spawn_timer_timeout():
 	instance = zombie.instantiate()
 	instance.position = spawn_point
 	navigation_region.add_child(instance)
+
+
+
+
+func _on_enemy_hit():
+	crosshair_hit.visible = true
+	await get_tree().create_timer(0.05).timeout
+	crosshair_hit.visible = false

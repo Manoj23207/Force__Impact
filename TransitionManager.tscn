@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://jaxb5b4wv07q"]
+
+[ext_resource type="Script" uid="uid://bq7huwma3i71r" path="res://TransitionManager.gd" id="1_ta0wc"]
+
+[node name="TransitionManager" type="CanvasLayer"]
+script = ExtResource("1_ta0wc")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

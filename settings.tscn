@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://odr7svt2vgdy"]
+[gd_scene load_steps=6 format=3 uid="uid://odr7svt2vgdy"]
 
 [ext_resource type="Script" uid="uid://spv66y5acjtx" path="res://settings.gd" id="1_nkug2"]
-[ext_resource type="AudioStream" uid="uid://df7y56r3e7w75" path="res://Audio/Zombie/Background_music.mp3" id="2_3ykye"]
+[ext_resource type="Texture2D" uid="uid://csvdyj4kgacyu" path="res://Materials/image1.jpg" id="2_3ykye"]
+[ext_resource type="AudioStream" uid="uid://b344bei7q3jww" path="res://Audio/Zombie/background_music.wav" id="3_gc0em"]
+[ext_resource type="PackedScene" uid="uid://dahpl8c2qnp0f" path="res://FadeIn.tscn" id="4_cj1lu"]
+[ext_resource type="PackedScene" uid="uid://dg4orb3rs2alm" path="res://UISound.tscn" id="5_71mqq"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -12,32 +15,42 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nkug2")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(642, 359.5)
+scale = Vector2(0.865489, 0.859375)
+texture = ExtResource("2_3ykye")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
+offset_left = 606.0
+offset_top = 296.0
+offset_right = 898.0
+offset_bottom = 501.0
 
-[node name="Volume-Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Volume-Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Volume"
+theme_override_colors/font_color = Color(0.942823, 0.942823, 0.942823, 1)
+theme_override_font_sizes/font_size = 25
+text = "             Volume"
 
-[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
+[node name="Volume" type="HSlider" parent="VBoxContainer"]
 layout_mode = 2
+value = 2.0
 
-[node name="Mute-Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Mute-Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "Mute"
 
-[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+[node name="Mute" type="CheckBox" parent="VBoxContainer/Mute-Label"]
 layout_mode = 2
+offset_left = 71.0
+offset_top = 7.0
+offset_right = 95.0
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 20
 
-[node name="Resolution" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+[node name="Resolution" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
 selected = 2
 item_count = 3
@@ -48,11 +61,30 @@ popup/item_1/id = 1
 popup/item_2/text = "1280x720"
 popup/item_2/id = 2
 
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_3ykye")
+stream = ExtResource("3_gc0em")
 volume_db = -10.0
 autoplay = true
 
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
-[connection signal="item_selected" from="MarginContainer/VBoxContainer/Resolution" to="." method="_on_resolution_item_selected"]
+[node name="FadeIn" parent="." instance=ExtResource("4_cj1lu")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 5.0
+offset_right = 2.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UISound" parent="." instance=ExtResource("5_71mqq")]
+
+[connection signal="value_changed" from="VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="VBoxContainer/Mute-Label/Mute" to="." method="_on_mute_toggled"]
+[connection signal="item_selected" from="VBoxContainer/Resolution" to="." method="_on_resolution_item_selected"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

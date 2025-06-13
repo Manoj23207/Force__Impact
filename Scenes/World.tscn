@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://db2h3t17k37pe"]
+[gd_scene load_steps=53 format=4 uid="uid://db2h3t17k37pe"]
 
 [ext_resource type="Texture2D" uid="uid://difglsmbfmw81" path="res://Textures/terrain.jpg" id="1_v880l"]
 [ext_resource type="Script" uid="uid://exisb4jhicks" path="res://Scripts/World.gd" id="1_yrgup"]
@@ -33,11 +33,15 @@
 [ext_resource type="Script" uid="uid://bjqrh2yu05v2w" path="res://addons/simplegrasstextured/grass.gd" id="29_ohoi8"]
 [ext_resource type="PackedScene" uid="uid://igrc84teqrtw" path="res://Scenes/Zombie.tscn" id="30_sjy1s"]
 [ext_resource type="PackedScene" uid="uid://5iurrb07epis" path="res://Scenes/Player.tscn" id="31_jumwc"]
-[ext_resource type="Script" uid="uid://1pu408mtjuk6" path="res://Scenes/spawns.gd" id="33_y8a40"]
+[ext_resource type="Script" uid="uid://dq6xfkcb4hyhu" path="res://Scenes/EnemyFactory.gd" id="33_5dli4"]
+[ext_resource type="Texture2D" uid="uid://d353ktascpx4e" path="res://Textures/Crosshairs/crosshair162.png" id="34_d4o7i"]
 [ext_resource type="Shader" uid="uid://bae0ggdep5xkb" path="res://Shaders/fog.gdshader" id="34_irg3d"]
+[ext_resource type="Texture2D" uid="uid://d3radhj6uixps" path="res://Textures/Crosshairs/crosshair161.png" id="35_bbwj2"]
 [ext_resource type="PackedScene" uid="uid://ckhu872agka67" path="res://Scenes/WaterShader.tscn" id="35_irg3d"]
 [ext_resource type="PackedScene" uid="uid://dv4j3pljbvlkb" path="res://Models/Scenes/VFX_ElectricRay_blue.tscn" id="37_n1aqv"]
 [ext_resource type="PackedScene" uid="uid://bhccvxpb1rbsw" path="res://Models/Scenes/VFX_ElectricRays_Fast_Yellow.tscn" id="38_d2jk0"]
+[ext_resource type="PackedScene" uid="uid://dldf40c3pg7ns" path="res://Models/Scenes/VFX_ElectricRays_red.tscn" id="39_5dli4"]
+[ext_resource type="PackedScene" uid="uid://jaxb5b4wv07q" path="res://TransitionManager.tscn" id="42_d4o7i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mq4nq"]
 shader = ExtResource("3_ao4cr")
@@ -57,7 +61,7 @@ volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.403922, 0.247059, 0.215686, 1)
 volumetric_fog_emission = Color(0.20094, 0.499528, 0.852123, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2jk0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d4o7i"]
 render_priority = 0
 shader = ExtResource("26_cnc6k")
 shader_parameter/player_pos = Vector3(1e+06, 1e+06, 1e+06)
@@ -89,7 +93,7 @@ _surfaces = [{
 "format": 34359742491,
 "index_count": 12,
 "index_data": PackedByteArray("AAABAAIAAwABAAAABAAFAAYABwAFAAQA"),
-"material": SubResource("ShaderMaterial_d2jk0"),
+"material": SubResource("ShaderMaterial_d4o7i"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -3910,7 +3914,6 @@ rings = 12
 
 [node name="Spawn1" type="Node3D" parent="Map/Spawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -1)
-script = ExtResource("33_y8a40")
 
 [node name="Spawn2" type="Node3D" parent="Map/Spawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -5)
@@ -3948,6 +3951,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.7, 0, -9)
 [node name="Spawn8" type="Node3D" parent="Map/Spawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.7, 0, -13)
 
+[node name="EnemyFactory" type="Node3D" parent="."]
+script = ExtResource("33_5dli4")
+
+[node name="Map2" type="Node3D" parent="EnemyFactory"]
+
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -3956,6 +3964,7 @@ offset_bottom = 40.0
 mouse_filter = 2
 
 [node name="HitRect" type="ColorRect" parent="UI"]
+visible = false
 layout_mode = 0
 offset_left = -878.0
 offset_top = -555.0
@@ -3964,9 +3973,23 @@ offset_bottom = 1698.0
 mouse_filter = 2
 color = Color(0.803922, 0.0313726, 0.117647, 0.266667)
 
-[node name="ZombieSpawnTimer" type="Timer" parent="."]
-wait_time = 4.0
-autostart = true
+[node name="CrosshairHit" type="TextureRect" parent="UI"]
+visible = false
+modulate = Color(0.826181, 0.18275, 0.236747, 1)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("34_d4o7i")
+
+[node name="Crosshair" type="TextureRect" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("35_bbwj2")
 
 [node name="Zombie" parent="." instance=ExtResource("30_sjy1s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
@@ -3997,6 +4020,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0904, -0.364142, -8.8343)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.801, 0.00950241, 7.49591)
 
 [node name="VFX_thunder_yellowFast2" parent="." instance=ExtResource("38_d2jk0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.801, 0.00950241, 11.3258)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8256, 0.00950241, 15.3277)
+
+[node name="VFX_thunder_yellowFast3" parent="." instance=ExtResource("38_d2jk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4937, 0.00950241, 22.8395)
+
+[node name="VFX_thunder_red1" parent="." instance=ExtResource("39_5dli4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -23.0274)
+
+[node name="VFX_thunder_red2" parent="." instance=ExtResource("39_5dli4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5665, 0, -23.0274)
+
+[node name="VFX_thunder_red3" parent="." instance=ExtResource("39_5dli4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1044, 0, -23.0274)
+
+[node name="ZombieSpawnTimer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="TransitionManager" parent="." instance=ExtResource("42_d4o7i")]
 
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]

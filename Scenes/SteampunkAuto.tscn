@@ -258,7 +258,7 @@ _data = {
 [node name="SteampunkAuto" type="Node3D"]
 
 [node name="Meshes" type="Node3D" parent="."]
-transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, -0.002)
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
 
 [node name="Wood" type="MeshInstance3D" parent="Meshes"]
 cast_shadow = 0
